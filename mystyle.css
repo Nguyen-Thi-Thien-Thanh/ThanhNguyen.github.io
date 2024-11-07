@@ -1,0 +1,54 @@
+body
+{
+    background-image: url('aquarium/background.jpg');
+    background-size: 99%;         /* Cho hình ảnh phủ toàn bộ trang */
+    background-repeat: no-repeat;   /* Không lặp lại hình ảnh */
+    background-position: center;    /* Đặt hình ở giữa */
+    height: 25%; width: 25%;
+    display: flex;
+    margin: 0;
+    justify-content: center ;
+    align-items: center;
+}
+
+
+#shark
+{ 
+    animation-name: shark;
+    animation: boiqualai 15s linear infinite;
+    position: absolute;
+    width: 100px; height: 100px; 
+    top: 70; left: 0;
+}
+
+@keyframes boiqualai 
+{
+    0%
+    {
+        left: 0; 
+        top: 70%;              
+        transform: rotateY(180deg); 
+    }
+
+    50% 
+    {
+        left: calc(100% - 80px); 
+        top: 40%;
+        transform: rotateY(180deg)
+
+    }
+
+    50.01%
+    {
+        transform:rotateY(0deg);
+        top: 40%;
+    }
+
+    100%
+    {
+        left: 0;
+        top: 70%;              
+        transform: rotateY(0deg);
+    }
+
+}
